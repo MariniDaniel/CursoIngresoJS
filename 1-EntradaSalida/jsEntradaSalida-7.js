@@ -17,27 +17,42 @@ function sumar()
 
 function restar()
 {
-	var numerouno=document.getElementById('numeroUno').value;
-	var numerodos=document.getElementById('numeroDos').value;
-	var resultado=parseInt(numerouno)-parseInt(numerodos);
+	var numerouno;
+	var numerodos;
+	var resultado
+	numerouno=document.getElementById('numeroUno').value;
+	numerouno=parseInt(numerouno);
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numerodos);
+	resultado=numerouno-numerodos;
 	alert("La resta es: "+resultado);
 }
 
 function multiplicar()
 { 
-	var numerouno=document.getElementById('numeroUno').value;
-	var numerodos=document.getElementById('numeroDos').value;
-	var resultado=parseInt(numerouno)*parseInt(numerodos);
+	var numerouno;
+	var numerodos;
+	var resultado
+	numerouno=document.getElementById('numeroUno').value;
+	numerouno=parseInt(numerouno);
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numerodos);
+	resultado=numerouno*numerodos;
 	alert("La multiplicacion es: "+resultado);
 }
 
 function dividir()
 {
 	
-	var numerouno=document.getElementById('numeroUno').value;
-	var numerodos=document.getElementById('numeroDos').value;
-	var resultado=parseInt(numerouno)/parseInt(numerodos);
-	alert("La division es : "+resultado)
+	var numerouno;
+	var numerodos;
+	var resultado
+	numerouno=document.getElementById('numeroUno').value;
+	numerouno=parseInt(numerouno);
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numerodos);
+	resultado=numerouno/numerodos;
+	alert("La division es: "+resultado);
 
 }
 
