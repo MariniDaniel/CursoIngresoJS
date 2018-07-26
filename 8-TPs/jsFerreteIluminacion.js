@@ -10,7 +10,119 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+	
+
+
 	var precioUnitario=35;
+ 	var cantidadLamparas;
+ 	var precioFinal;
+ 	var precioBruto;
+ 	var descuento=1;
+ 	var marca;
+ 	var ingresosBrutos;
+ 	marca=document.getElementById('Marca').value;                 //Tomo marca
+ 	cantidadLamparas=document.getElementById('Cantidad').value;	  //Tomo cantidad de lamparas 		
+ 	cantidadLamparas=parseInt(cantidadLamparas);				  //Paso a entero la cantidad	
+ 	precioBruto=precioUnitario*cantidadLamparas;
+
+ 	switch(cantidadLamparas){
+
+ 		case 1:
+ 		case 2:
+
+ 			break;
+
+ 		case 3:
+
+ 			if (marca=="ArgentinaLuz") {
+
+ 				precioBruto=precioBruto*0.85;
+ 			}	
+
+ 			else if (marca=="FelipeLamparas") {
+
+ 				precioBruto=precioBruto*0.90;
+ 			}
+
+ 			else{
+
+ 				precioBruto=precioBruto*0.95;
+
+ 			}
+
+ 		case 4:
+
+ 			if(marca=="ArgentinaLuz"|| marca=="FelipeLamparas"){
+
+ 			precioBruto=precioBruto*0.75;
+ 		
+ 			}
+
+ 			else {
+
+ 			precioBruto=precioBruto*0.80;
+
+ 			}
+
+ 		case 5:
+
+ 			if (cantidadLamparas==5 && marca=="ArgentinaLuz") {
+
+ 			precioBruto=precioBruto*0.60;
+
+ 			}
+
+ 			else if (cantidadLamparas==5) {
+
+ 			precioBruto=precioBruto*0.70
+
+ 			}
+
+ 		case 6:
+
+ 			if (cantidadLamparas>=6) {
+
+ 			precioBruto=precioBruto*0.50;
+
+ 	
+ 			}	
+
+
+ 	}
+
+
+
+	precioFinal=precioBruto*descuento;
+ 	document.getElementById('precioDescuento').value=precioFinal;
+
+ 	if (precioFinal>=120) {
+
+ 		ingresosBrutos=precioFinal*0.1;
+ 		precioFinal=precioFinal+ingresosBrutos;
+ 		alert("Usted pago :  "+precioFinal+"   ,Siendo   "+ingresosBrutos+"  el impuesto que se pago");
+
+
+ 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*var precioUnitario=35;
  	var cantidadLamparas;
  	var precioFinal;
  	var precioBruto;
@@ -94,7 +206,7 @@ function CalcularPrecio ()
 
 
 
- 	}
+ 	}*/
 
 
 
@@ -110,32 +222,7 @@ function CalcularPrecio ()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 	/*var precioUnitario=35;
+ /*	var precioUnitario=35;
  	var cantidadLamparas;
  	var precioFinal;
  	var precioBruto;
@@ -174,7 +261,9 @@ function CalcularPrecio ()
  					precioBruto=precioBruto*0.95;
  	
  			}
- 			 			
+ 		
+ 			 break;
+
  		case 4:
  				
  			switch(marca){
@@ -190,6 +279,7 @@ function CalcularPrecio ()
  					precioBruto=precioBruto*0.80;
 
  			}
+ 			break;
  		
  		case 5:
  			switch(marca){
@@ -204,6 +294,7 @@ function CalcularPrecio ()
 
 
  			}	
+ 			break;
 
  		default:
  		
@@ -224,8 +315,8 @@ function CalcularPrecio ()
  		precioFinal=precioFinal+ingresosBrutos;
  		alert("Usted pago :  "+precioFinal+"   ,Siendo   "+ingresosBrutos+"  el impuesto que se pago");
  	}
+	
 	*/
-
 
 }
 	
