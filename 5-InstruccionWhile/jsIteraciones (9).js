@@ -14,7 +14,8 @@ function mostrar()
 		numero=prompt("Digite un numero: ");
 		numero=parseInt(numero);
 		
-		if (contador==1) {
+		if (contador==1) //bandera ingresa solamente una vez
+		{
 
 			mayor=numero;
 
@@ -23,13 +24,15 @@ function mostrar()
 
 		}
 
-		if(numero>mayor){
+		if(numero>mayor)
+		{
 
 			mayor=numero;
 
 		}	
 
-		else if (numero<menor) {
+		else if (numero<menor) 
+		{
 
 			menor=numero;
 
