@@ -10,4 +10,81 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
 function ComenzarIngreso () 
 {
  
+	var edad;
+	var sexo;
+	var estadoCivil;
+	var sueldoBruto;
+	var NumeroDeLegajo;
+	var	Nacionalidad;
+
+	edad=prompt("Digite su edad: ");
+
+	while(edad<18 || edad>90)
+	{
+		edad=prompt("Digite su edad: ");
+
+	}
+
+	sexo=prompt("Digite su sexo: ");
+
+	while(sexo!=f && sexo!=m)
+	{
+		sexo=prompt("Digite su sexo: ");
+
+	}
+
+	estadoCivil=prompt("Digite su estado civil :1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos : ");
+	
+
+	while(estadoCivil!=1 &&  estadoCivil!=2 &&  estadoCivil!=3 && estadoCivil!=4)
+	{
+		
+		estadoCivil=prompt("Digite su estado civil: ");
+
+	}
+	switch(estadoCivil)
+	{
+
+		case 1:
+			estadoCivil="soltero";
+		break;
+
+		case 2:
+			estadoCivil="casados";	
+		break;
+
+		case 3: 
+			estadoCivil="divorciados";
+		break;
+		
+		case 4:
+			estadoCivil="viudos";
+		break;
+
+
+	}
+
+
+
+
+
+
+	document.getElementById('Edad').value=edad;
+	document.getElementById("Sexo").value=sexo;
+	document.getElementById(estadoCivil)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
