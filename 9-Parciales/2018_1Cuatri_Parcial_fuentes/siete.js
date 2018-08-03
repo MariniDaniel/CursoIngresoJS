@@ -13,6 +13,7 @@ function mostrar()
 	var menorDeEdad=0;
 	var edadMayor=-9999;
 	var edadMenor=9999;
+	var nombreMayor;
 	var contador=0;
 
 
@@ -75,18 +76,25 @@ function mostrar()
 	 		edadMayor=edad;
 
 			edadMenor=edad;
+
+			edadMayor=nombre;
 	 	}
 	 	if(edad>edadMayor)
 		{
 
 			edadMayor=edad;
 
+			edadMayor=nombre;
+
+
 		}	
 
-		else if (edad<edadMenor) 
+		else if (edadMenor>edad) 
 		{
 
 			edadMenor=edad;
+
+			edadMayor=nombre;
 		}
 
 
