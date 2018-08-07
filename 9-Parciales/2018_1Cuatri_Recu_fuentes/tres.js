@@ -4,16 +4,28 @@ function mostrar()
 
 	var precioInicial;
 	var descuento;
-	var cuenta;
+	var precioConDescuento;
 	var iva;
-	
-	precioInicial=prompt("Ingrese precio : ");
-	descuento=precioInicial*0.50;
-	cuenta=precioInicial-descuento;
-	iva=precioInicial*0.21;
+	var precioFinal;
 
-	alert(" el precio con descuento es : "+cuenta+" y el iva es :  "+iva);
-	document.getElementById('elPrecioFinal').value=descuento+iva;
+	precioInicial=prompt("Digite el precio : ");
+	precioInicial=parseInt(precioInicial);
+
+	descuento=prompt("Digite el descuento: ");
+	descuento=parseInt(descuento);
+
+	precioConDescuento=precioInicial-descuento;
+
+	iva=precioConDescuento*0.21;
+
+	precioFinal=precioConDescuento+iva;
+
+	alert("El descuento en dinero es: "+descuento+" ,El precio con descuento es: "+precioConDescuento+" , el iva es: "+iva);
+
+	document.getElementById("elPrecioFinal").value=precioFinal;
+
+
+
 	
 
 
